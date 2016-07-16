@@ -1,0 +1,12 @@
+C:\Users\Do Nguyen\Documents\Visual Studio 2013\Projects\iClinic Online System\iClinic Online System\bin\iClinic Online System.dll.config
+C:\Users\Do Nguyen\Documents\Visual Studio 2013\Projects\iClinic Online System\iClinic Online System\bin\iClinic Online System.dll
+C:\Users\Do Nguyen\Documents\Visual Studio 2013\Projects\iClinic Online System\iClinic Online System\bin\iClinic Online System.pdb
+C:\Users\Do Nguyen\Documents\Visual Studio 2013\Projects\iClinic Online System\iClinic Online System\obj\Debug\iClinic Online System.csprojResolveAssemblyReference.cache
+C:\Users\Do Nguyen\Documents\Visual Studio 2013\Projects\iClinic Online System\iClinic Online System\obj\Debug\iClinic Online System.dll
+C:\Users\Do Nguyen\Documents\Visual Studio 2013\Projects\iClinic Online System\iClinic Online System\obj\Debug\iClinic Online System.pdb
+C:\inetpub\wwwroot\iClinic Online System\iClinic Online System\bin\iClinic Online System.dll.config
+C:\inetpub\wwwroot\iClinic Online System\iClinic Online System\bin\iClinic Online System.dll
+C:\inetpub\wwwroot\iClinic Online System\iClinic Online System\bin\iClinic Online System.pdb
+C:\inetpub\wwwroot\iClinic Online System\iClinic Online System\obj\Debug\iClinic Online System.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\iClinic Online System\iClinic Online System\obj\Debug\iClinic Online System.dll
+C:\inetpub\wwwroot\iClinic Online System\iClinic Online System\obj\Debug\iClinic Online System.pdb
