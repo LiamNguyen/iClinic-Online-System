@@ -132,7 +132,10 @@
                 </tr>
                 <tr>
                     <td rowspan="2">Loại giá</td>
-                    <td rowspan="2"><asp:DropDownList ID="loaigia" runat="server" Width="141px"></asp:DropDownList></td>
+                    <td rowspan="2"><asp:DropDownList ID="loaigia" runat="server" Width="141px">
+                                        <asp:ListItem Text="200"></asp:ListItem>
+                                        <asp:ListItem Text="300"></asp:ListItem>
+                                    </asp:DropDownList></td>
                     <td>Số lượng</td>
                     <td style="margin-left:5px"><asp:TextBox ID="soluong" runat="server" Width="44" Text="1"  style="text-align:center"></asp:TextBox></td>
                     <td style="color:red""><strong>x</strong></td>
@@ -170,7 +173,6 @@
             headerstyle-font-bold="true"
             headerstyle-backcolor="Navy"
             alternatingitemstyle-backcolor="lightblue"
-            width="100%" DataSourceID="SqlDataSource1"
         />  
     </form>
 </body>

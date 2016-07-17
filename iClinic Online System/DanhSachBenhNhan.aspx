@@ -20,6 +20,7 @@
          <h2 style="text-align:center;color:rgb(0, 122, 204);font-family:Verdana">Receive new patient</h2>
         <p></p>
         <div>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
         <asp:GridView ID="gridView" DataKeyNames="stor_id" runat="server"
                 AutoGenerateColumns="false" ShowFooter="true" HeaderStyle-Font-Bold="true"
                 onrowcancelingedit="gridView_RowCancelingEdit"
