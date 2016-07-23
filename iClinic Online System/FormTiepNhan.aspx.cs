@@ -11,7 +11,7 @@ namespace iClinic_Online_System
 {
     public partial class FormTiepNhan : System.Web.UI.Page
     {
-        private SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=iClinicSystem_MONACO_BK;User ID=sa;Password=ThanhTruc1208");
+        private SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=iClinicDb;User ID=sa;Password=ThanhTruc1208");
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,7 +22,7 @@ namespace iClinic_Online_System
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataSet ds = new DataSet();
-            string sql = "select PAT_SER_ID , QUANTITY, PERCENT_DOWN, PRICE from PATIENTS_SERVICE";
+            string sql = "select PAT_SER_ID, QUANTITY, PERCENT_DOWN, PRICE from ServiceInfo";
             connection.Open();
             SqlCommand command = new SqlCommand(sql, connection);
             adapter.SelectCommand = command;
@@ -40,10 +40,8 @@ namespace iClinic_Online_System
                 ds.Tables[0].Rows.Add(ds.Tables[0].NewRow());
                 grid.DataSource = ds;
                 grid.DataBind();
-                string display = "Data not found";
-                ClientScript.RegisterStartupScript(this.GetType(), "yourMessage", "alert('" + display + "');", true);
+                alert("Data not found");
             }
-
         }
 
         public void addService(object sender, EventArgs e)
@@ -64,32 +62,53 @@ namespace iClinic_Online_System
                 if (result == 1)
                 {
                     loadDb();
-                    string display = "Successfully added a new service";
-                    ClientScript.RegisterStartupScript(this.GetType(), "yourMessage", "alert('" + display + "');", true);
+                    alert("Successfully added a new service");
                 }
                 else
                 {
-                    string display = "Error while adding a new service";
-                    ClientScript.RegisterStartupScript(this.GetType(), "yourMessage", "alert('" + display + "');", true);
+                    alert("Error while adding a new service");
                 }
             }
             catch(SqlException ex)
             {
                 if (ex.Number == 2627) {
-                    string display = "Repetition of Service ID";
-                    ClientScript.RegisterStartupScript(this.GetType(), "yourMessage", "alert('" + display + "');", true);
+                    alert("Repetition of Service ID");
                 }
             }
         }
 
-        public void cancelService(object sender, EventArgs e)
+        protected void gridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            string PAT_SER_ID = grid.DataKeys[e.RowIndex].Values["PAT_SER_ID"].ToString();
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("delete from ServiceInfo where PAT_SER_ID =" + PAT_SER_ID, connection);
+            int result = cmd.ExecuteNonQuery();
+            connection.Close();
 
+            if (result == 1)
+            {
+                loadDb();
+                alert("Successfully deleted a service");
+            }
+            else
+            {
+                alert("Error while deleting a service");
+            }
         }
 
         public void newPatient(object sender, EventArgs e)
         {
 
+        }
+
+        protected void madichvu_TextChanged(object sender, EventArgs e)
+        {
+            tendichvu.Text = madichvu.Text;
+        }
+
+        public void alert(string alertMessage)
+        {
+            ClientScript.RegisterStartupScript(this.GetType(), "yourMessage", "alert('" + alertMessage + "');", true);
         }
     }
 }
