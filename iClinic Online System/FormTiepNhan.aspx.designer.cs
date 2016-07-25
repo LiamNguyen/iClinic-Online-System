@@ -67,13 +67,13 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.RadioButtonList gioitinh;
         
         /// <summary>
-        /// stt control.
+        /// married control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox stt;
+        protected global::System.Web.UI.WebControls.CheckBox married;
         
         /// <summary>
         /// diachi control.
@@ -103,22 +103,13 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
         
         /// <summary>
-        /// dienthoai control.
+        /// cmnd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dienthoai;
-        
-        /// <summary>
-        /// giotiepnhan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList giotiepnhan;
+        protected global::System.Web.UI.WebControls.TextBox cmnd;
         
         /// <summary>
         /// phuongxa control.
@@ -148,22 +139,13 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.TextBox tuoi;
         
         /// <summary>
-        /// email control.
+        /// noigioithieu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
-        
-        /// <summary>
-        /// cmnd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cmnd;
+        protected global::System.Web.UI.WebControls.TextBox noigioithieu;
         
         /// <summary>
         /// quanhuyen control.
@@ -173,6 +155,51 @@ namespace iClinic_Online_System {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox quanhuyen;
+        
+        /// <summary>
+        /// dienthoai control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dienthoai;
+        
+        /// <summary>
+        /// nguoilienhe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nguoilienhe;
+        
+        /// <summary>
+        /// tinhthanh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList tinhthanh;
+        
+        /// <summary>
+        /// email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox email;
+        
+        /// <summary>
+        /// quoctich control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList quoctich;
         
         /// <summary>
         /// lydotiepnhan control.
@@ -193,58 +220,22 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.DropDownList doituong;
         
         /// <summary>
-        /// noigioithieu control.
+        /// sothutu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox noigioithieu;
+        protected global::System.Web.UI.WebControls.TextBox sothutu;
         
         /// <summary>
-        /// tinhthanh control.
+        /// giotiepnhan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList tinhthanh;
-        
-        /// <summary>
-        /// hinhthucden control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList hinhthucden;
-        
-        /// <summary>
-        /// dtchitiet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dtchitiet;
-        
-        /// <summary>
-        /// nguoilienhe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nguoilienhe;
-        
-        /// <summary>
-        /// quoctich control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList quoctich;
+        protected global::System.Web.UI.WebControls.TextBox giotiepnhan;
         
         /// <summary>
         /// madichvu control.
@@ -319,6 +310,24 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.TextBox ketqua1;
         
         /// <summary>
+        /// submitBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton submitBtn;
+        
+        /// <summary>
+        /// ImageButton4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
+        
+        /// <summary>
         /// giachophep control.
         /// </summary>
         /// <remarks>
@@ -344,24 +353,6 @@ namespace iClinic_Online_System {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tendichvu;
-        
-        /// <summary>
-        /// submitBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton submitBtn;
-        
-        /// <summary>
-        /// ImageButton4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
         
         /// <summary>
         /// grid control.

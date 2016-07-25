@@ -6,16 +6,25 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Globalization;
 
 namespace iClinic_Online_System
 {
     public partial class FormTiepNhan : System.Web.UI.Page
     {
         private SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=iClinicDb;User ID=sa;Password=ThanhTruc1208");
+        DateTime dateTime = DateTime.Now;
+
+        public static DateTime Now { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             loadDb();
+            getCurrentDateTime();
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("select QUANTITY from ServiceInfo where PAT_SER_ID = 123", connection);
+            hoten.Text = cmd.ExecuteScalar().ToString();
+            connection.Close();
         }
 
         public void loadDb()
@@ -34,6 +43,7 @@ namespace iClinic_Online_System
             {
                 grid.DataSource = ds;
                 grid.DataBind();
+
             }
             else
             {
@@ -110,5 +120,33 @@ namespace iClinic_Online_System
         {
             ClientScript.RegisterStartupScript(this.GetType(), "yourMessage", "alert('" + alertMessage + "');", true);
         }
+
+        public void getCurrentDateTime()
+        {
+            giotiepnhan.Text = dateTime.ToString("dd/MM/yyyy hh:mm");
+        }
+
+        public string calculateAge()
+        {
+            if (ngaysinh.Text != null)
+            {
+                string dob = ngaysinh.Text;
+                string year = "";
+
+                for (int i = 4; i > 0; i--)
+                {
+                    year += dob[dob.Length - i];
+                }
+
+                return (Convert.ToInt32(dateTime.ToString("yyyy")) - Convert.ToInt32(year)).ToString();
+            }
+            return null;
+        }
+
+        protected void ngaysinh_TextChanged(object sender, EventArgs e)
+        {
+            tuoi.Text = calculateAge();
+        }
+
     }
 }
