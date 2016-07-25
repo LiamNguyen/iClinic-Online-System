@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DanhSachBenhNhan.aspx" />
+    <Content Include="DanhSachDichVu.aspx" />
     <Content Include="FormTiepNhan.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\cancel.jpg" />
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="DanhSachBenhNhan.aspx.designer.cs">
       <DependentUpon>DanhSachBenhNhan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachDichVu.aspx.cs">
+      <DependentUpon>DanhSachDichVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhSachDichVu.aspx.designer.cs">
+      <DependentUpon>DanhSachDichVu.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormTiepNhan.aspx.cs">
       <DependentUpon>FormTiepNhan.aspx</DependentUpon>
