@@ -21,10 +21,6 @@ namespace iClinic_Online_System
         {
             loadDb();
             getCurrentDateTime();
-            connection.Open();
-            SqlCommand cmd = new SqlCommand("select QUANTITY from ServiceInfo where PAT_SER_ID = 123", connection);
-            hoten.Text = cmd.ExecuteScalar().ToString();
-            connection.Close();
         }
 
         public void loadDb()
@@ -82,28 +78,19 @@ namespace iClinic_Online_System
             catch(SqlException ex)
             {
                 if (ex.Number == 2627) {
-                    alert("Repetition of Service ID");
+                    alert("Service has already been added!");
                 }
             }
         }
 
-        protected void gridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        protected void gridView_RowDeleting(object sender, EventArgs e)
         {
-            string PAT_SER_ID = grid.DataKeys[e.RowIndex].Values["PAT_SER_ID"].ToString();
+            LinkButton removeService = (LinkButton)sender;
             connection.Open();
-            SqlCommand cmd = new SqlCommand("delete from ServiceInfo where PAT_SER_ID =" + PAT_SER_ID, connection);
+            SqlCommand cmd = new SqlCommand("delete from ServiceInfo where PAT_SER_ID = @PAT_SER_ID", connection);
+            cmd.Parameters.Add("@PAT_SER_ID", SqlDbType.VarChar).Value = removeService.CommandArgument;
             int result = cmd.ExecuteNonQuery();
             connection.Close();
-
-            if (result == 1)
-            {
-                loadDb();
-                alert("Successfully deleted a service");
-            }
-            else
-            {
-                alert("Error while deleting a service");
-            }
         }
 
         public void newPatient(object sender, EventArgs e)
