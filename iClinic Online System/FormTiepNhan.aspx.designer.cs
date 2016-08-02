@@ -238,22 +238,40 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.TextBox giotiepnhan;
         
         /// <summary>
-        /// madichvu control.
+        /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox madichvu;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// ImageButton3 control.
+        /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton3;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
+        /// MaDichVuTxtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MaDichVuTxtBox;
+        
+        /// <summary>
+        /// PopUpServiceListBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton PopUpServiceListBtn;
         
         /// <summary>
         /// noithuchien control.
@@ -265,13 +283,13 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.DropDownList noithuchien;
         
         /// <summary>
-        /// giam control.
+        /// GiamTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox giam;
+        protected global::System.Web.UI.WebControls.TextBox GiamTxtBox;
         
         /// <summary>
         /// loaigia control.
@@ -283,22 +301,22 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.DropDownList loaigia;
         
         /// <summary>
-        /// soluong control.
+        /// SoLuongTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox soluong;
+        protected global::System.Web.UI.WebControls.TextBox SoLuongTxtBox;
         
         /// <summary>
-        /// giathuoc control.
+        /// DonGiaTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox giathuoc;
+        protected global::System.Web.UI.WebControls.TextBox DonGiaTxtBox;
         
         /// <summary>
         /// ketqua1 control.
@@ -328,13 +346,13 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.ImageButton addPatient;
         
         /// <summary>
-        /// giachophep control.
+        /// GiaChoPhepTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox giachophep;
+        protected global::System.Web.UI.WebControls.TextBox GiaChoPhepTxtBox;
         
         /// <summary>
         /// ketqua2 control.
@@ -346,31 +364,22 @@ namespace iClinic_Online_System {
         protected global::System.Web.UI.WebControls.TextBox ketqua2;
         
         /// <summary>
-        /// tendichvu control.
+        /// TenDichVuTxtBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tendichvu;
+        protected global::System.Web.UI.WebControls.TextBox TenDichVuTxtBox;
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// test control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
-        /// <summary>
-        /// UpdatePanel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.Label test;
         
         /// <summary>
         /// grid control.
@@ -380,5 +389,62 @@ namespace iClinic_Online_System {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grid;
+        
+        /// <summary>
+        /// mp1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender mp1;
+        
+        /// <summary>
+        /// Panl1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panl1;
+        
+        /// <summary>
+        /// irm1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlIframe irm1;
+        
+        /// <summary>
+        /// closeModalPopUp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button closeModalPopUp;
+        
+        /// <summary>
+        /// hdValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdValue;
+        
+        /// <summary>
+        /// PreviousPage property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new iClinic_Online_System.DanhSachDichVu PreviousPage {
+            get {
+                return ((iClinic_Online_System.DanhSachDichVu)(base.PreviousPage));
+            }
+        }
     }
 }

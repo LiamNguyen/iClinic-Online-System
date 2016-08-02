@@ -46,18 +46,24 @@ namespace iClinic_Online_System
                 ds.Tables[0].Rows.Add(ds.Tables[0].NewRow());
                 grid.DataSource = ds;
                 grid.DataBind();
-                alert("Data not found");
+                JsAlert("Data not found");
             }
         }
 
         public void addService(object sender, EventArgs e)
         {
+            if (MaDichVuTxtBox.Text == "")
+            {
+                MaDichVuTxtBox.BackColor = System.Drawing.ColorTranslator.FromHtml("#FF6678");
+                return;
+            }
+
             try
             {
                 string strSQL = "INSERT INTO ServiceInfo (PAT_SER_ID, QUANTITY, PERCENT_DOWN, PRICE) VALUES ( ";
-                strSQL += madichvu.Text + ", ";
-                strSQL += soluong.Text + ", ";
-                strSQL += giam.Text + ", ";
+                strSQL += MaDichVuTxtBox.Text + ", ";
+                strSQL += SoLuongTxtBox.Text + ", ";
+                strSQL += GiamTxtBox.Text + ", ";
                 strSQL += "'" + loaigia.Text + "')";
 
                 connection.Open();
@@ -68,17 +74,17 @@ namespace iClinic_Online_System
                 if (result == 1)
                 {
                     loadDb();
-                    alert("Successfully added a new service");
+                    ScriptManager.RegisterStartupScript(Page, GetType(), "clearTxtBox", "<script>clearTxtBox()</script>", false);
                 }
                 else
                 {
-                    alert("Error while adding a new service");
+                    JsAlert("Error while adding new service");
                 }
             }
             catch(SqlException ex)
             {
                 if (ex.Number == 2627) {
-                    alert("Service has already been added!");
+                    JsAlert("Service has already been added!");
                 }
             }
         }
@@ -91,6 +97,8 @@ namespace iClinic_Online_System
             cmd.Parameters.Add("@PAT_SER_ID", SqlDbType.VarChar).Value = removeService.CommandArgument;
             int result = cmd.ExecuteNonQuery();
             connection.Close();
+            loadDb();
+
         }
 
         public void newPatient(object sender, EventArgs e)
@@ -100,12 +108,12 @@ namespace iClinic_Online_System
 
         protected void madichvu_TextChanged(object sender, EventArgs e)
         {
-            tendichvu.Text = madichvu.Text;
+            TenDichVuTxtBox.Text = MaDichVuTxtBox.Text;
         }
 
-        public void alert(string alertMessage)
+        public void JsAlert(string alertMessage)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "yourMessage", "alert('" + alertMessage + "');", true);
+            ScriptManager.RegisterStartupScript(Page, GetType(), "alertPopUp", "<script>alertPopUp('" + alertMessage + "')</script>", false);
         }
 
         public void getCurrentDateTime()

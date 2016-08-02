@@ -50,9 +50,9 @@ namespace iClinic_Online_System
 
         protected void OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            string pName = grid.SelectedRow.Cells[1].Text;
-            msg.Text = "<b>Publisher Name  &nbsp;:&nbsp;&nbsp;   " + pName + "</b>";
+            string id = grid.SelectedRow.Cells[0].Text;
+            Session["PAT_SER_ID"] = "ID: " + id;
+            msg.Text = "ID: " + id + " is selected";
         }
-
     }
 }
